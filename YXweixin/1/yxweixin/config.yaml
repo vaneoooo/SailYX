@@ -1,0 +1,7 @@
+name: yxweixin
+version: 1
+libraries:
+- name: lxml
+  version: "2.3.4"
+- name: sqlalchemy
+  version: "0.7.3"
