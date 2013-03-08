@@ -29,8 +29,6 @@ def test():
     if mc.get('movie_list'):
         return mc.get('movie_list')
     content = moviespider()
-    if not content[0]:
-        return (u'哎哟~今天电影院还没发布电影信息~稍等会再来吧。')
     s = ''
     for i in range(0,len(content[0])):
         s+=''.join(content[0][i])
@@ -82,3 +80,8 @@ def index():
         return echostr
     mc.set('is_test',time.ctime(),time=50)
     return mc.get('is_test')
+    
+    
+
+
+

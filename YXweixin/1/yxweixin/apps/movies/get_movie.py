@@ -44,8 +44,19 @@ def moviespider():
         movie_time.append(time_temp)
         movie_price.append(price_temp)
         
+#        for time in qc(m_list.find_all('strong')):
+#            movie_time.append(time)
+#        for price in m_list.find_all('em'):
+#            movie_time.append(price)
     movie_list.append(movie_name)
     movie_list.append(movie_time)
     movie_list.append(movie_price)
+    
+#    for i in range(0,len(movie_list[0])):
+#        print ''.join(movie_list[0][i])
+#        print ',    '.join(movie_list[1][i])
+#        print ',    '.join(movie_list[2][i])
 
     return movie_list
+
+    
