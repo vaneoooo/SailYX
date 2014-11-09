@@ -1,0 +1,104 @@
+{{extend "AdminView/index.html"}}
+{{block staticfile}}
+<script type="text/javascript" charset="utf-8">
+window.UEDITOR_HOME_URL = "/static/js/ueditor/";
+</script>
+<script type="text/javascript" charset="utf-8" src="/static/js/ueditor/editor_config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/js/ueditor/editor_all_min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/js/ueditor/themes/default/ueditor.css"/>
+<link href="/static/css/lib/uniform.default.css" type="text/css" rel="stylesheet">
+<link href="/static/css/lib/select2.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/compiled/new-user.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../static/css/compiled/form-showcase.css" type="text/css" media="screen" />
+{{end}}
+
+{{block main}}
+<div class="container-fluid">
+    <div id="pad-wrapper" class="new-user">
+      <div class="row-fluid header">
+          <h3>添加新文章</h3>
+      </div>
+      <div class="row-fluid form-wrapper">
+        <!-- left column -->
+        <div class="span9 with-sidebar">
+          <div class="container">
+            <form class="new_user_form">
+              <div class="span12 field-box">
+                <label>文章标题：</label>
+                <input type="text" class="span9">
+              </div>
+              <div class="span12 field-box">
+                <label>所属栏目：</label>
+                <div class="ui-select span5">
+                  <select><option value="0">请选择栏目...</option>
+                    <option value="AK">政务公开</option>
+                    <option value="HI">党建工作</option>
+                    <option value="CA">区县新闻</option>
+                    <option value="NV">走进社区</option>
+                    <option value="OR">市长信箱</option>
+                  </select>
+                </div>
+              </div><div class="span12 field-box">
+                <label>所属专题：</label>
+                <div class="ui-select span5">
+                  <select><option value="0">请选择专题...</option>
+                    <option value="AK">中国梦</option>
+                    <option value="HI">庆祝十八大</option>
+                    <option value="CA">科学发展观</option>
+                    <option value="NV">党员先进性</option>
+                  </select>
+                </div>
+              </div><div class="field-box">
+                                <label>文章属性</label>
+                                <label class="checkbox">
+                                     <input type="checkbox">可读
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox">首页推荐
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox"> 头条
+                                </label>
+                            </div><div class="field-box">
+                                <label>正文：</label>
+                                <textarea rows="10" class="span10" id="editor"></textarea>
+                            </div>
+              <div class="span12 field-box">
+                <input type="submit" class="span2 btn-glow primary" value="发表">
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- side right column -->
+        <div class="span3 form-sidebar pull-right">
+          <div class="btn-group toggle-inputs hidden-tablet">
+            <button data-input="inline" class="glow left">INLINE INPUTS</button>
+            <button data-input="normal" class="glow right active">NORMAL INPUTS</button>
+          </div>
+          <div class="alert alert-info hidden-tablet"> <i class="icon-lightbulb pull-left"></i> Click above to see difference between inline and normal inputs on a form </div>
+          <h6>Sidebar text for instructions</h6>
+          <p>Add multiple users at once</p>
+          <p>Choose one of the following file types:</p>
+          <ul>
+            <li><a href="#">Upload a vCard file</a></li>
+            <li><a href="#">Import from a CSV file</a></li>
+            <li><a href="#">Import from an Excel file</a></li>
+          </ul>
+        </div>
+      </div>
+</div>
+  </div>
+
+{{end}}
+{{block js}}
+//<script>
+//var ue=new UE.ui.Editor();
+//UE.getEditor('editor',{
+//      initialFrameWidth : 600,
+//      initialFrameHeight: 300,
+//      initialContent:'',
+//  });
+//
+//</script>
+{{end}}
